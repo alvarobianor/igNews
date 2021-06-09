@@ -1,0 +1,7 @@
+**Adicionando TypeScript**
+
+- Da para criar uma aplicação next já com template typescript, mas usaremos uma Js e mudaremos para Ts
+- Após instalar o TS e as tipagens do react e Node, muda os .Js para .tsx e restartar o serve, vualá, a mágica está feita.
+- Importar o AppProps para o _app (ainda saberei o que ele faz)
+- Indo no NPM da para saber se o pacote tem tipagem nativa ou precisa baixar
+

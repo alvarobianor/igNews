@@ -1,0 +1,5 @@
+**Criando estrutura Next.js**
+
+- A estrutura vem bem clean comparada ao create-react-app, da para apagar várias coisas.
+- Cria uma SRC e deixa a pasta pages ou na raiz ou dentro dela, somente nesses dois lugares é possivel deixar ela.
+- O arquivo _app é padrão

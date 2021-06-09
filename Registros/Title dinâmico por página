@@ -1,0 +1,5 @@
+**Title dinâmico por página**
+
+- Se usar o <title> dentro do Document, vai acontecer um warning falando sobre o arquivo estático, podemos importar o componente Head de dentro do Next em qualquer page, ele vai fazer o link dinâmico com o Head no _document e vai gerar titles dinâmicos na nossa aplicação
+
+- Um head vem do 'next/document' esse é o que vai no _document e o Head dinâmico vem do 'next/head' e esse é usado em qualquer página

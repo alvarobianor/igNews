@@ -1,0 +1,8 @@
+**Configurando fonte externa**
+
+- O _app é onde vai carregar todas as páginas pelo sistema de fileroot do next que gerencia o roteamento das páginas, é util para definir ações globais para a aplicação, como Conntext e components estático onde vai ser mostrado em todas as páginas, mas em todas as páginas mesmo.
+
+- fonts e coisas que são carregadas uma única vez são no _document e é comparado ao index.html do create-react-app que tempos dentro da pasta public, escrevemos esse componente em formato de class
+
+- Vou na documentação e procuro o _document, copio e colo.
+- Importar a font é normal

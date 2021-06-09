@@ -1,0 +1,6 @@
+**Estilização com SASS**
+
+- O next por padrão nn permite importar css direto na página pois esse css vai ser global
+- CSS modules: nome_do_arquive.module.css, só estiliza classes e ids, quando importar vc usa o formato de import semelhante ao styled-components
+- Podemos utilizar o sass junto so css-modules, instala o sass e muda o .css para .scss, tbm tem o .sass (o .sass vc usa o css parecido com python)
+- Com tudo assim já podemos usar normalmente a sintaxe do css e usar css em cascata
