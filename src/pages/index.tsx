@@ -1,13 +1,15 @@
 import Head from "next/head";
-import style from "../../styles/home.module.scss";
+// import style from "../../styles/home.module.scss";
+
+
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Inicio | ig.news</title>
       </Head>
-      <h1 className={style.title}>Álvaro Bianor</h1>
+      <h1>Álvaro Bianor Sousa Medeiros</h1>
     </>
   );
 }
