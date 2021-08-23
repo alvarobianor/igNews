@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import style from "../../styles/home.module.scss";
+import style from "./home.module.scss";
 
 
 
@@ -7,9 +7,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Inicio | ig.news</title>
+        <title>Home | ig.news</title>
       </Head>
-      <h1>Álvaro Bianor Sousa Medeiros</h1>
+      <main className={style.contentContainer}>
+        <section className={style.hero}>
+          <span>👏 Hey, welcome!</span>
+          <h1>New about the <span>React</span> world.</h1>
+
+          <p>Get access to all publications
+            <span> for $59.99 month</span>. 😘
+          </p>
+        </section>
+        <img src="/images/avatar.svg" alt="girl coding" />
+      </main>
     </>
   );
 }

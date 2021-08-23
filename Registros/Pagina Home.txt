@@ -1,0 +1,3 @@
+**Pagina Home**
+
+- utilizar por exemplo >span vai estilizar o span mais externo 
