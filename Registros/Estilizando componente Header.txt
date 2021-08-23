@@ -1,0 +1,3 @@
+**Estilizando componente Header**
+
+- ::after, vai estiliza dpos do conteúdo da tag e ::before vem antes
