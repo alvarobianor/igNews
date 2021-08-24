@@ -1,0 +1,6 @@
+**Consumindo API do stribe**
+
+- Para consumir uma chamada server-side rendering, precisamos exportar obrigatoriamente uma função
+getServerProps e a página só vai aparecer obrigatoriamente depois da chamada a API. E sempre async.
+- Para poder importar os tipos corretamente dessa getServerSideProps corretamente escrevemos ela como
+arrow function.
