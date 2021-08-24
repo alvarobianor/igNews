@@ -1,3 +1,8 @@
 **Static Site Generation**
 
--
+- O SSG seria já deixar uma página salva em html pré carregada para não ter q gerar uma nova chamada cada vez que for usar
+isso é vantajoso em páginas que mudam muito pouco.
+- Para fazer isso basta mudar o getServerSideProps para getStaticProps e suas tipagens e vualá.
+- Vai ter uma prop no final do retorno para informar quanto tempo até revalidaar a página novamente
+- Client side: carrega informações dinamicas de acordo com o comportamento do usuário (informações que aparecem dps da página carregar), server side: precisa de indexação mas
+tbm precisa de informações dinâmicas (carregam junto com a página), Statica Site Generation: páginas que raramente vão mudar e precisam de indexação
