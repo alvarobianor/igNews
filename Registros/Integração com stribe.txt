@@ -1,0 +1,5 @@
+**Integração com stribe**
+
+- Cira a conta mas nn ativa, da pra usar de boas
+- Cria um produto
+- Cria a .env.local e salva a private key lá
