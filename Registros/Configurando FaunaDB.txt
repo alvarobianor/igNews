@@ -1,0 +1,3 @@
+**Configurando FaunaDB**
+
+- Cadastrar no Fauna, super easy e configurar a chave de API
