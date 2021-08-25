@@ -1,0 +1,5 @@
+**Parametrização das rotas** 
+
+- nomear a rota com ex: [id].tsx o parametro id vai estar disponivel através do route.query
+- para pegar uma rota dinâmica, podemos usar o spread operator [...params]  e chamar route,query.params e vai
+retornar um array com o que foi passado.

@@ -1,0 +1,3 @@
+**Autenticação com nexAuth**
+
+- Ler a documentação. Só seguir oq está lá

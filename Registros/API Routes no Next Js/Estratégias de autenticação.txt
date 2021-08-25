@@ -1,0 +1,3 @@
+**Estratégias de autenticação**
+
+- Foi uma aula simples falando das estratégias de autenticação, seja do proprio next, ou jwt ou de libs externas.

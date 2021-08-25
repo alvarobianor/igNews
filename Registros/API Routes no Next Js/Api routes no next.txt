@@ -1,0 +1,4 @@
+**Api routes no next**
+
+- Da para simular um backend dentro do front, basta criar uma pasta API dentro de Pages que os arquivos vão ser rotas.
+- Esse backend é em serveless 
