@@ -1,0 +1,3 @@
+**Salvando usuário no banco**
+
+- Usa-se FQL para salvar, a sintexe é meio verbosa, mas da pra usar

@@ -1,0 +1,3 @@
+**Configurações no Github** 
+
+- deixar o email publico no github

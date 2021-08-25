@@ -1,0 +1,3 @@
+**Chave privada do JWT**
+
+- Usar outro formato de chave jwt, chave hs alguma coisa
