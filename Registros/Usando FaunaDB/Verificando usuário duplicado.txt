@@ -1,0 +1,3 @@
+**Verificando usuário duplicado**
+
+- Usa uma query em FQL para verificar se existe um esuário, o bom disso é que faz a verificação em uma query só.
