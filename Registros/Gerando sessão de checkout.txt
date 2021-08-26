@@ -1,0 +1,6 @@
+**Gerando sessão de checkout**
+
+- Gerar a URL/sessão de checkout para o pagamento na plataforma do stripe.
+- conferir a documentação do stripe parar fazer pagamento.
+- Os coockies são a melhor forma de compartilhar informações tanto no front quanto backend no next.
+- Depois de fazer toda manipulação, transforma o ID em uma url
