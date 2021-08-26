@@ -1,0 +1,3 @@
+**Evitando duplicação no Stripe**
+
+- Invés de criar um novo costumer sempre, vai verificar se já existe um e trazer 

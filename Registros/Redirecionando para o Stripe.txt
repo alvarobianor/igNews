@@ -1,0 +1,3 @@
+**Redirecionando para o Stripe**
+
+- É mais ver a documentação e seguir né
