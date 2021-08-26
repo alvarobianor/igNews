@@ -1,0 +1,6 @@
+**Webhooks do Stribe**
+
+- Instala a CLI do stripe para ouvir webhooks
+- Webhooks são formas de integração com plataformas de terceiros, para comunicar a aplicação que tal evento aconteceu
+e a aplicação tratar da forma que deseja.
+- 
