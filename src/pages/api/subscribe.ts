@@ -6,7 +6,6 @@ import { stripe } from "../../services/stripe";
 
 interface User {
   ref: {
-    email: string;
     id: string;
   },
   data: {
@@ -60,7 +59,7 @@ export default async function Session(req: NextApiRequest, res: NextApiResponse)
       billing_address_collection: 'required',
       line_items: [
         {
-          price: 'price_1JRyaxCabKLj36XyuK7n0POQ',
+          price: process.env.PRICE_STRIPE_ID,
           quantity: 1,
         },
       ],

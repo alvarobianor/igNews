@@ -1,3 +1,4 @@
 **Evitando duplicação no Stripe**
 
 - Invés de criar um novo costumer sempre, vai verificar se já existe um e trazer 
+- A parte chata é ter que consultar a documentação e fazer a verificação de tipos manualmente
