@@ -1,0 +1,6 @@
+**Ouvindo eventos do Stripe****************
+
+- Para tratar a leitura da requisição que vem em formato de streaming, vms usar um código do exemplo
+de inegração com o node, não precisa entender direito o código.
+- Por padrão exportamos uma config desativando o bodyParser, tem na documentação do proprio NextJs
+- É comum ter uma secret para os webhooks
