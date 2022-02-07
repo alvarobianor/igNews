@@ -1,0 +1,4 @@
+**Salvando dados do evento**
+
+- bugsnag é para avisar quando há um bug.
+- 

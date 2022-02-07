@@ -7,67 +7,57 @@ import { stripe } from "../../services/stripe";
 interface User {
   ref: {
     id: string;
-  },
+  };
   data: {
-    stripe_costumer: string;
-  }
+    stripe_customer: string;
+  };
 }
 
-
-export default async function Session(req: NextApiRequest, res: NextApiResponse) {
+export default async function Session(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method === "POST") {
-
     const session = await getSession({ req });
 
     const user = await fauna.query<User>(
-      q.Get(
-        q.Match(
-          q.Index('user_by_email'),
-          q.Casefold(session.user.email)
-        ),
-      )
-    )
+      q.Get(q.Match(q.Index("user_by_email"), q.Casefold(session.user.email)))
+    );
 
-    let costumerId = user.data.stripe_costumer
+    let costumerId = user.data.stripe_customer;
 
     if (!costumerId) {
       const stipeUserSession = await stripe.customers.create({
         email: session.user.email,
         // name: session.user.name,
-      })
+      });
 
       await fauna.query(
-        q.Update(
-          q.Ref(
-            q.Collection('users'), user.ref.id),
-          {
-            data: {
-              stripe_costumer: stipeUserSession.id,
-            }
-          }
-        )
-      )
+        q.Update(q.Ref(q.Collection("users"), user.ref.id), {
+          data: {
+            stripe_customer: stipeUserSession.id,
+          },
+        })
+      );
 
-      costumerId = stipeUserSession.id
+      costumerId = stipeUserSession.id;
     }
-
-
 
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
       customer: costumerId,
-      payment_method_types: ['card'],
-      billing_address_collection: 'required',
+      payment_method_types: ["card"],
+      billing_address_collection: "required",
       line_items: [
         {
           price: process.env.PRICE_STRIPE_ID,
           quantity: 1,
         },
       ],
-      mode: 'subscription',
+      mode: "subscription",
       allow_promotion_codes: true,
       success_url: process.env.SUCCESS_URL,
-      cancel_url: process.env.CANCEL_URL
-    })
+      cancel_url: process.env.CANCEL_URL,
+    });
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
   } else {
