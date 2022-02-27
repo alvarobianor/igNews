@@ -1,0 +1,6 @@
+**Ouvindo mais eventos**
+
+- se tu quiserusar a mesma lógica para varios switchs tu só coloca um case abaixo do outro e o ultimo gera a lógica para os 3
+- poderiamos fazer a escuta dos eventos do webhook de duas formas, verigfica se a subscription já exist ou só nn escuta um
+dos eventos.
+- Criei uma lógica pronta para em todos os casos ele criar apenas apenas uma subscription por costumer
