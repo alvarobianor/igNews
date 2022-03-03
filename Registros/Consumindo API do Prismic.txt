@@ -1,0 +1,5 @@
+**Consumindo API do Prismic** 
+
+- Instala o CLI para React
+- Ver a documentação do Prismic para fazer a query para pegar os Posts
+- 
