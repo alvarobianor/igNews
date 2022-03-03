@@ -1,0 +1,4 @@
+**Página: Posts**
+
+- Criar a página de Posts
+- Apenas estilização e criar uma página estática
