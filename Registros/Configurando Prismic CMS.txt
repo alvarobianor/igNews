@@ -1,0 +1,8 @@
+**Configurando Prismic CMS**
+
+- Criar conta free no prismic, para até 1 projeto e uma pessoa ele é grátis.
+- Criar um custom type
+- O custom type serve para termos o esqueleto.
+- Usaremos o custom type para criar os posts
+- Configurar a API.
+- 
