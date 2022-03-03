@@ -1,0 +1,9 @@
+**Escolhendo um CMS**
+
+- Jam stack já é oq estavamos fazendo, construir frontends independentes, o next nos da essa possibilidade
+- JamStack tbm é um sistema completo sem uma estrutura completa (sem backend)
+- JAMStack => Javascript, API, Markup
+- CMS => Content Management System => Wordprass, Drupal, Magento, Blog? 
+- Headless CMS => sem parte visual, apenas painel de admin, dados servidos de API http, GraphQl ou SDK => Prismic CMS, Shopify e
+Keystone.
+- 
