@@ -1,0 +1,5 @@
+**Componente: ActiveLink**
+
+- Eu posso extender os tipos usando extends ou usar "type & " para extender
+- Uma coisa muito legal e pouco utilizada, quando eu passo um children via pros para um elemento, eu não consigo estilizar ou modificar ele, porem existe o cloneElement
+do próprio react que me permite alterar o elemento criando um clone dele aí sim eu consigo mudar, mt show isso.
