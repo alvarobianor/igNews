@@ -1,0 +1,6 @@
+**Listando posts em tela**
+
+- Aprendendo sobre formataçãod e dados
+- Melhor formatar a data antes de exportar para o HTML, ao consumir o dado da API
+- Instala a lib prismic-dom para formatar dos dados para HTML que vemd entro do data da requisição
+- 

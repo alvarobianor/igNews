@@ -6,48 +6,60 @@ import Prismic from "@prismicio/client";
 
 import styles from "./styles.module.scss";
 
-export default function Posts() {
+import { RichText } from "prismic-dom";
+import ApiSearchResponse from "@prismicio/client/types/ApiSearchResponse";
+
+type Title = {
+  type: string;
+  text: string;
+  spans: any[];
+};
+
+type Span = {
+  start: number;
+  end: number;
+  type: string;
+};
+
+type Content = {
+  type: string;
+  text: string;
+  spans: Span[];
+};
+
+type Post = {
+  uid: string;
+  title: Title[];
+  content: Content[];
+};
+
+type Finalpost = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  updatedAt: string;
+};
+
+type FinalPostsProps = {
+  posts: Finalpost[];
+};
+
+export default function Posts({ posts }: FinalPostsProps) {
   return (
     <>
       <Head>Posts | Ignews</Head>
 
       <main className={styles.container}>
         <div className={styles.posts}>
-          <a href="#">
-            <time>03 de Março de 2022</time>
-            <strong>FREZAAAAAAAAAAAAAAA</strong>
-            <p>
-              Strong é uma tag mt robusta, amo ela de paixão, eu me inspiro no
-              Igor Guimarães
-            </p>
-          </a>
-
-          <a href="#">
-            <time>03 de Março de 2022</time>
-            <strong>FREZAAAAAAAAAAAAAAA</strong>
-            <p>
-              Strong é uma tag mt robusta, amo ela de paixão, eu me inspiro no
-              Igor Guimarães
-            </p>
-          </a>
-
-          <a href="#">
-            <time>03 de Março de 2022</time>
-            <strong>FREZAAAAAAAAAAAAAAA</strong>
-            <p>
-              Strong é uma tag mt robusta, amo ela de paixão, eu me inspiro no
-              Igor Guimarães
-            </p>
-          </a>
-
-          <a href="#">
-            <time>03 de Março de 2022</time>
-            <strong>FREZAAAAAAAAAAAAAAA</strong>
-            <p>
-              Strong é uma tag mt robusta, amo ela de paixão, eu me inspiro no
-              Igor Guimarães
-            </p>
-          </a>
+          {posts.map((post) => {
+            return (
+              <a key={post.slug} href={post.slug}>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.excerpt}</p>
+              </a>
+            );
+          })}
         </div>
       </main>
     </>
@@ -57,16 +69,33 @@ export default function Posts() {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const response = await prismic.query(
+  const response: ApiSearchResponse<Post> = await prismic.query(
     [Prismic.predicates.at("document.type", "publication")],
     {
       fetch: ["publication.title", "publication.content"],
       pageSize: 100,
     }
   );
-  console.log("Prismic: ", JSON.stringify(response, null, 2));
+
+  const posts = response.results.map((post) => {
+    return {
+      slug: post.uid,
+      title: RichText.asText(post.data.title),
+      excerpt:
+        post.data.content.find((content) => content.type === "paragraph")
+          ?.text ?? "",
+      updatedAt: new Date(post.last_publication_date).toLocaleString("pt-BR", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      }),
+    } as Finalpost;
+  });
 
   return {
-    props: {},
+    props: {
+      posts,
+    },
+    revalidate: 60 * 60,
   };
 };
