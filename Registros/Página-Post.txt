@@ -1,0 +1,6 @@
+**Página: Post**
+
+- Cria a página de post no formato dinamico [slug].tsx
+- Tem que ser export default por padrão as páginas
+- Tipagem é melhor deixar em um escopo local do que exportar tipagens de outros lugares
+- Toda tag tem o dangerouslyInnerHTML que tu injeta o html e o elemento formata, mas é muito perigoso e não é bom usar

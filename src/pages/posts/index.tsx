@@ -8,6 +8,7 @@ import styles from "./styles.module.scss";
 
 import { RichText } from "prismic-dom";
 import ApiSearchResponse from "@prismicio/client/types/ApiSearchResponse";
+import Link from "next/link";
 
 type Title = {
   type: string;
@@ -53,11 +54,13 @@ export default function Posts({ posts }: FinalPostsProps) {
         <div className={styles.posts}>
           {posts.map((post) => {
             return (
-              <a key={post.slug} href={post.slug}>
-                <time>{post.updatedAt}</time>
-                <strong>{post.title}</strong>
-                <p>{post.excerpt}</p>
-              </a>
+              <Link href={`/posts/${post.slug}`}>
+                <a key={post.slug} href={post.slug}>
+                  <time>{post.updatedAt}</time>
+                  <strong>{post.title}</strong>
+                  <p>{post.excerpt}</p>
+                </a>
+              </Link>
             );
           })}
         </div>
