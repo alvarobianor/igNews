@@ -1,0 +1,4 @@
+**Validando assinatura ativa**
+
+- Estudando um pouco sobre o Next-Auth, podemos usar na parte de configurações, mais uma callback para inferir dados 
+globalmente na sessão so usuário logado de forma super intuitiva.]
