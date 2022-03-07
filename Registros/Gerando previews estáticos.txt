@@ -1,0 +1,8 @@
+**Gerando previews estáticos**
+
+- Com o getStaticProps existem três formas de gerar as páginas estaticas => (no build, no primeiro acesso e uma mescla das duas primeiras).
+- O getStaticPaths diz quais as páginas vão ser geradas durando o build.
+- O getStaticPaths só existe em páginas que necessitam do getStaticProps e são dinâmicas.
+- Se o parametro fallback for passado como true, msm que a página sega getStaticProps, a requisição vai ser feita em tempo de execução, pelo cliente (browser).
+- Se o fallback for false, ele retorna um 404 de página não encontrada.
+- Se for blocking, ele vai buildar a página para depois mostrar ao usuário.

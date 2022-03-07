@@ -59,6 +59,16 @@ export default function Post({ post }: PostPreviewProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
+    //   paths: [
+    //     {
+    //       params: {
+    //         slug: "",
+    //       },
+    //     },
+    //   ],
+    //   fallback: "blocking",
+    // };
+
     paths: [],
     fallback: "blocking",
   };
@@ -90,5 +100,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       post,
     },
+    revalidate: 60 * 60,
   };
 };
