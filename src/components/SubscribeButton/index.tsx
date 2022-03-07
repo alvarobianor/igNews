@@ -19,7 +19,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
       return;
     }
 
-    if (session.activeSubscription) {
+    if (session?.activeSubscription) {
       router.push("/posts");
       return;
     }
@@ -45,7 +45,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
         className={styles.subscribeButton}
         onClick={handleSubscribe}
       >
-        {session.activeSubscription ? "Acessar Posts" : "Subscribe Now!"}
+        {session?.activeSubscription ? "Access Posts 😍" : "Subscribe Now!"}
       </button>
     </>
   );

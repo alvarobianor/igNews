@@ -1,0 +1,4 @@
+**Página: Preview do post**
+
+- A getStaticPaths vai ser explicada depois
+- O Array de dependencias do UseEffect, geralmente vc usa com as insfos que vc usa de fora.

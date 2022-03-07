@@ -27,7 +27,7 @@ export default function Home({ product }: HomeProps) {
           <h1>
             New about the <span>React</span> world.
           </h1>
-          {!session.activeSubscription && (
+          {!session?.activeSubscription && (
             <p>
               Get access to all publications
               <span> for {product.amount} month</span>. 😘

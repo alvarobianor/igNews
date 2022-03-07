@@ -9,6 +9,7 @@ import styles from "./styles.module.scss";
 import { RichText } from "prismic-dom";
 import ApiSearchResponse from "@prismicio/client/types/ApiSearchResponse";
 import Link from "next/link";
+import { useSession } from "next-auth/client";
 
 type Title = {
   type: string;
@@ -46,6 +47,7 @@ type FinalPostsProps = {
 };
 
 export default function Posts({ posts }: FinalPostsProps) {
+  const [session] = useSession();
   return (
     <>
       <Head>Posts | Ignews</Head>
@@ -54,7 +56,13 @@ export default function Posts({ posts }: FinalPostsProps) {
         <div className={styles.posts}>
           {posts.map((post) => {
             return (
-              <Link href={`/posts/${post.slug}`}>
+              <Link
+                href={`/posts/${
+                  !session?.activeSubscription
+                    ? `preview/${post.slug}`
+                    : post.slug
+                }`}
+              >
                 <a key={post.slug} href={post.slug}>
                   <time>{post.updatedAt}</time>
                   <strong>{post.title}</strong>
